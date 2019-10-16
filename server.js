@@ -82,7 +82,6 @@ app.get('/api/friends', authenticator, (req, res) => {
 
 app.get('/api/friends/:id', authenticator, (req, res) => {
   const friend = friends.find(f => f.id == req.params.id);
-
   if (friend) {
     res.status(200).json(friend);
   } else {
